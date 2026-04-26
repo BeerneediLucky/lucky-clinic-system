@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { api } from "@/services/api";
 
 const BookingForm = () => {
   const [formData, setFormData] = useState({
@@ -11,7 +12,8 @@ const BookingForm = () => {
     problem: "",
     date: ""
   });
-  const [status, setStatus] = useState(null);
+  const [status, setStatus] = useState("idle"); // idle, loading, success, error
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -20,27 +22,17 @@ const BookingForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setStatus("submitting");
-    try {
-      // Connects to Django Backend
-      const response = await fetch("http://localhost:8000/api/appointments/", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+    setStatus("loading");
+    setErrorMessage("");
 
-      const data = await response.json();
-      if (response.ok && data.success) {
-        setStatus("success");
-        setFormData({ name: "", phone: "", problem: "", date: "" });
-      } else {
-        setStatus("error");
-      }
+    try {
+      await api.bookAppointment(formData);
+      setStatus("success");
+      setFormData({ name: "", phone: "", problem: "", date: "" });
     } catch (error) {
       console.error("Booking Error:", error);
       setStatus("error");
+      setErrorMessage(typeof error === 'string' ? error : "Something went wrong. Please try again.");
     }
   };
 
@@ -75,10 +67,10 @@ const BookingForm = () => {
           </div>
 
           {status === "success" && <div className="text-trust-green font-medium">Appointment booked successfully!</div>}
-          {status === "error" && <div className="text-destructive font-medium">Failed to book appointment. Try again.</div>}
+          {status === "error" && <div className="text-destructive font-medium">{errorMessage}</div>}
 
-          <Button type="submit" disabled={status === "submitting"} className="w-full h-12 text-base">
-            {status === "submitting" ? "Booking..." : "Confirm Booking"}
+          <Button type="submit" disabled={status === "loading"} className="w-full h-12 text-base">
+            {status === "loading" ? "Processing..." : "Confirm Booking"}
           </Button>
         </form>
       </div>

@@ -41,7 +41,7 @@ const AboutSection = () =>
           <p className="text-muted-foreground mt-1 text-lg">Dermatologist</p>
           <p className="text-muted-foreground mt-4 leading-relaxed">
             Dr. Lucky provides compassionate, expert dermatological care to patients of all backgrounds. 
-            Known for her warm approach and clear communication, she ensures every patient understands 
+            Known for his warm approach and clear communication, he ensures every patient understands 
             their treatment plan and feels confident in their skin health journey.
           </p>
 
