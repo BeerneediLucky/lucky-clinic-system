@@ -54,7 +54,7 @@ const LocationSection = () =>
               <div>
                 <h3 className="font-semibold text-foreground">Address</h3>
                 <p className="text-muted-foreground text-sm mt-1">
-                  Dr Kondapalli Hospital Centre, Ravipadu Road, Hyderabad Road,
+                  Lucky Hospital Centre, Ravipadu Road, Hyderabad Road,
                   Narasaraopet, Andhra Pradesh – 522601
                 </p>
               </div>
@@ -85,8 +85,8 @@ const LocationSection = () =>
               </div>
               <div>
                 <h3 className="font-semibold text-foreground">Phone</h3>
-                <a href="tel:+918919348815" className="text-primary text-sm font-medium mt-1 block hover:underline">
-                  +91 89193 48815
+                <a href="tel:+917207231018" className="text-primary text-sm font-medium mt-1 block hover:underline">
+                  +91 7207231018
                 </a>
               </div>
             </div>

@@ -2,11 +2,13 @@ import { motion } from "framer-motion";
 import { Droplets, Shield, Sun, Scissors, Sparkles } from "lucide-react";
 
 const services = [
-{ icon: Droplets, title: "Acne & Pimples Treatment", desc: "Advanced treatments for acne, pimples, and breakouts with lasting results." },
-{ icon: Shield, title: "Skin Allergy Treatment", desc: "Expert diagnosis and relief for rashes, eczema, and allergic reactions." },
-{ icon: Sun, title: "Pigmentation & Spots", desc: "Effective solutions for dark spots, melasma, and uneven skin tone." },
-{ icon: Scissors, title: "Hair Fall Treatment", desc: "Comprehensive hair fall analysis and treatment for healthier, stronger hair." },
-{ icon: Sparkles, title: "General Skin Care", desc: "Preventive care and guidance for glowing, healthy skin all year round." }];
+  { icon: Droplets, title: "Acne & Pimples Treatment", desc: "Advanced treatments for acne, pimples, and breakouts with lasting results." },
+  { icon: Shield, title: "Skin Allergy Treatment", desc: "Expert diagnosis and relief for rashes, eczema, and allergic reactions." },
+  { icon: Sun, title: "Pigmentation & Spots", desc: "Effective solutions for dark spots, melasma, and uneven skin tone." },
+  { icon: Scissors, title: "Hair Fall Treatment", desc: "Comprehensive hair fall analysis and treatment for healthier, stronger hair." },
+  { icon: Sparkles, title: "Physiotherapy", desc: "Professional rehabilitation for sports injuries, paralysis, and post-op recovery." },
+  { icon: Droplets, title: "Arthritis Care", desc: "Specialized joint care and management plans for geriatric and chronic patients." }
+];
 
 
 const ServicesSection = () =>

@@ -7,6 +7,7 @@ import Index from "./pages/Index.jsx";
 import Login from "./pages/Login.jsx";
 import AdminDashboard from "./pages/AdminDashboard.jsx";
 import NotFound from "./pages/NotFound.jsx";
+import Chatbot from "./components/Chatbot.jsx";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +23,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
+      <Chatbot />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />

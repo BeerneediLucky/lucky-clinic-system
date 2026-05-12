@@ -1,6 +1,6 @@
 import { Phone, MapPin, MessageCircle } from "lucide-react";
 
-const WHATSAPP_URL = "https://wa.me/918919348815?text=Hello%20Doctor,%20I%20want%20to%20book%20an%20appointment";
+const WHATSAPP_URL = "https://wa.me/917207231018?text=Hello%20Doctor,%20I%20want%20to%20book%20an%20appointment";
 
 const Footer = () =>
 <footer className="bg-foreground text-background py-12">
@@ -31,15 +31,15 @@ const Footer = () =>
         <div>
           <h4 className="font-semibold mb-3">Contact</h4>
           <div className="space-y-3 text-sm text-background/70">
-            <a href="tel:+918919348815" className="flex items-center gap-2 hover:text-background transition-colors">
-              <Phone className="h-4 w-4" /> +91 89193 48815
+            <a href="tel:+917207231018" className="flex items-center gap-2 hover:text-background transition-colors">
+              <Phone className="h-4 w-4" /> +91 7207231018
             </a>
             <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-background transition-colors">
               <MessageCircle className="h-4 w-4" /> WhatsApp Us
             </a>
             <div className="flex items-start gap-2">
               <MapPin className="h-4 w-4 mt-0.5 shrink-0" />
-              <span>Dr Kondapalli Hospital Centre, Ravipadu Road, Narasaraopet, AP – 522601</span>
+              <span>Lucky Hospital Centre, Ravipadu Road, Narasaraopet, AP – 522601</span>
             </div>
           </div>
         </div>
