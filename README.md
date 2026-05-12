@@ -1,7 +1,5 @@
 # 🏥 Lucky Clinic Management System (LCMS)
 
-![Landing Mockup](file:///C:/Users/Beerneedi%20lucky/.gemini/antigravity/brain/512195f5-ed4c-4a6a-bc64-e81c32f4e7d6/lucky_clinic_landing_mockup_1778581763684.png)
-
 > **"Advanced Care, Intelligent Assistance."**
 > A state-of-the-art, full-stack medical clinic management solution featuring a custom-trained AI Assistant, automated patient onboarding, and a high-performance administration dashboard.
 
