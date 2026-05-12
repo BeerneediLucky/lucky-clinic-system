@@ -44,18 +44,25 @@
     --hero-gradient: linear-gradient(135deg, hsl(205 78% 45% / 0.08), hsl(25 55% 85% / 0.3));
     --card-shadow: 0 4px 24px hsl(205 78% 45% / 0.08);
     --card-shadow-hover: 0 8px 32px hsl(205 78% 45% / 0.14);
+    
+    /* SaaS Dashboard Tokens */
+    --dashboard-bg: 210 40% 98%;
+    --glass-bg: 0 0% 100% / 0.7;
+    --glass-border: 0 0% 100% / 0.2;
+    --medical-gradient: linear-gradient(135deg, #0ea5e9 0%, #2dd4bf 100%);
+    --accent-gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
 
     --font-display: 'Playfair Display', serif;
     --font-body: 'Inter', sans-serif;
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 215 25% 27%;
+    --sidebar-primary: 205 78% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 40% 96.1%;
+    --sidebar-accent-foreground: 205 78% 45%;
+    --sidebar-border: 210 20% 90%;
+    --sidebar-ring: 205 78% 45%;
   }
 }
 
@@ -67,18 +74,36 @@
     @apply bg-background text-foreground;
     font-family: var(--font-body);
   }
-  h1, h2, h3 {
+  h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
   }
 }
 
 @layer utilities {
-  .text-gradient-primary {
-    background: linear-gradient(135deg, hsl(var(--primary)), hsl(205 60% 55%));
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-xl;
+  }
+  .glass-sidebar {
+    @apply bg-white/80 backdrop-blur-lg border-r border-slate-200/50 shadow-sm;
+  }
+  .text-gradient-medical {
+    background: var(--medical-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
+  .bg-medical {
+    background: var(--medical-gradient);
+  }
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
 }
 
 html {
